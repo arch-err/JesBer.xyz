@@ -2,4 +2,4 @@
 My own personal website
 ---
 
-# Comming soon
+# Comming soon...
