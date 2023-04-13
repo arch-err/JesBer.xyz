@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Poiret+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap');
+
+body {
+    background-color: rgb(0, 0, 0);
+    margin: 0;
+    overflow-x: hidden;
+}
+
+
+nav {
+    position: absolute;
+    width: 100%;
+    height: 3em;
+    z-index: 1;
+    font-size: 24px;
+    display: flex;
+    overflow: hidden;
+    border-bottom: 1px solid linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(47,47,47,1) 36%, rgba(255,255,255,1) 100%);
+}
+
+nav #links {
+    display: flex;
+    width: 25em;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    margin-left: auto;
+    overflow: hidden;
+}
+
+nav a {
+    color: rgb(146, 146, 146);
+    transition: 200ms color;
+    list-style: none;
+    text-decoration: none;
+}
+
+nav li {list-style: none;}
+
+nav a:hover {
+    color: white;
+    transition: 200ms color;
+}
+
+nav #l1:hover ~ #fade {
+    right: -10em;
+    transition: right 0.5s ;
+
+}
+nav #l2:hover ~ #fade {
+    right: -20em;
+    transition: right 0.5s ;
+
+}
+nav #l3:hover ~ #fade {
+    right: -30em;
+    transition: right 0.5s ;
+
+}
+
+nav #fade {
+    --a: 0em;
+    height: 2px;
+    width: calc(100% - var(--a));
+    bottom: 0px;
+    position: absolute;
+    background-color: white;
+    right: 0;
+    transition: right 0.5s ;
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0) calc(100% - var(--a) - 40em), rgba(0, 190, 0, 0.171) calc(100% - var(--a) - 30em), rgb(0, 190, 0) 100%); 
+
+}
+
+
+section {
+    width: 100%;
+    font-size: 30px;
+    color: #888;
+    // font-family: 'Share Tech Mono', monospace;
+    font-family: 'Quicksand', sans-serif;
+    display: flex;
+    flex-direction: row;
+}
+
+
+h1 {
+    font-family: 'Poiret One', cursive;
+    font-size: 90px;
+    margin: 0px;
+    font-weight: bold;
+}
+
+p {
+    line-height: 1.8em;
+    font-weight: 100;
+}
+
+
+li {
+    list-style: none;
+}
+
+
+#end {
+    height: 30vh;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+
+}
+
+
+#last {
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    border-right: .03em solid #888;
+    height: 1em;
+    padding-right: 0.2em;
+    animation: blink-caret .75s step-end infinite;
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: #888; }
+}
+
+#bracket {
+    font-size: 2em;
+    margin-left: 0.5em;
+    margin-right: 0.5em;
+
+    color: rgb(0, 98, 0);
+}
+
+#end a {
+    text-decoration: none;
+    color: #888;
+    transition: 200ms color;
+
+}
+
+#end a:hover {
+    transition: 200ms color;
+    color: white;
+}

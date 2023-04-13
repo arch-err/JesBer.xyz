@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../general.css">
+    <title>Archer</title>
+</head>
+
+    <nav>
+        <ul id="links">
+            <li id="l1">
+                <a href="../tech/">
+                    /Technologies/
+                </a>
+            </li>
+            <li id="l2">
+                <a href="index.html">
+                    /Archer/
+                </a>
+            </li>
+            <li id="l3">
+                <a href="../index.html">
+                    /About/
+                </a>
+            </li>
+            
+            <div id="fade"></div>
+        </ul>
+    </nav>
+
+    <section id="linux">
+        <img src="../src/img/Archer.png" alt="">
+        <div id="text">
+            <h1>Archer</h1>
+            <p>
+                Archer is what call my operating system.
+                It is based on Arch Linux, which is a very minimal linux distribution with nothing preinstalled.
+                This has enabled me to pick and choose exactly which programs my OS should include and how it is built.
+                Below are some short texts on my thoughts on my OS, what I use, and why.
+            </p>
+        </div>
+    </section>
+
+    <section id="bspwm">
+        <img src="../src/img/bspwm.png" alt="">
+        <div id="text">
+            <h1>BSPWM</h1>
+            <p>
+                Instead of using a whole desktop envirnment like kde or gnome, I use a simple window manager (WM).
+                Binary space partitioning window manager, or bspwm for short, is a tiling window manager that's very easy to control programmatically through a built in tool called "bspc".
+                I've tried multiple different WMs but bspwm is hands down the best tiling WM in my opinion, due to bspc making it easy to write scripts and expand the functionality of the WM.
+                I've written multiple scripts for bspwm, and some can be found on my <a href="https://github.com/arch-err">github</a>. 
+            </p>
+        </div>
+    </section>
+
+    <section id="terminal">
+        <div id="faketerminal">
+            <p id="termText">
+                arch-err@computer:~ $ echo "Hello World!"
+                <br>
+                Hello World
+                <br>
+                <br>
+                arch-err@computer:~ <span id="last">$ </span>
+            </p>
+        </div>
+        <div id="text">
+            <h1>The Terminal</h1>
+            <p>
+                Through learning linux and learning to use a terminal I've realized that using terminal applications where most functionalities are bound to hotkeys has increased my productivity alot.
+                When I learned to use the keyboard for everything instead of using a mouse my productivity and speed increased,
+                but using terminal applications that work like this are also way lighter to run, and lastly, a big benefit is that they can be used even when SSHing in to my system.
+                And as a bonus, you also look like a cool hacker-man when using them!
+            </p>
+        </div>
+    </section>
+
+    <section id="shell">
+        <div id="faketerminal">
+            <p id="termText">
+                1 #!/bin/bash
+                <br>2 
+                <br>3 [[ $1 == "" ]] && echo "Usage: ./zippy <folder> <depth>" && exit 1
+                <br>    4 [[ $2 == "" ]] && echo "Usage: ./zippy <folder> <depth>" && exit 1
+                <br>5 
+                <br>6 ln=$1
+                <br>7 
+                <br>8 for i in $(seq 1 $2)
+                <br>9 do    
+                <br>10  cn=$(openssl rand -hex 16)
+                <br>11  zip --password $cn $cn.zip $ln &>/dev/null
+                <br>12  
+                <br>13  rm $ln &>/dev/null
+                <br>14  ln=$cn.zip
+                <br>15  echo -ne "\r(Zipped $i/$2)"
+                <br>16 done
+                <br>17
+                <br>18 rm -rf $1
+                <br>19
+
+            </p>
+        </div>
+        <div id="text">
+            <h1>Shell S3cripting</h1>
+            <p>
+                The thing I probably love most about linux is that everything is a file in linux, and if you are working with plaintext,
+                it is very easy to do tons of work with short, simple, shell scripts.
+                Learning to work with core utils and some additional minimal utilities in the shell can do a lot of work in no time.
+                One quick example of this was when I went through a cyber security program and we were doing a lab in analysing some email logs.
+                There were about a dozen files with thousands of lines of logs, but through using utilities in the shell like cat, sed, grep, diff, etc.
+                I was able to isolate the useful data we needed and keep investigating the attacked email server and clients. Instead of pulling up some
+                big program to parse through and search for the evidence in the logs, the same thing could be done just by using some simple shell commands.
+                <br>
+                <br>
+            </p>
+            <p>
+                This script is a small project I did called "zippy", you can find more information about it on github.
+            </p>
+        </div>
+
+
+    </section>
+
+    <section id="miniprogs">
+        <img src="../src/img/tux.png" alt="">
+        <div id="text">
+            <h1>Minimal Programs</h1>
+            <p>
+                Another important aspect of my computer usage is that I tend to use what seems like way too simple programs. For example: my pdf reader.
+                I use zathura to open pdfs, and the main difference between zathura and alot of different programs is that it only views my pdf.
+                I don't need hundreds of small different buttons that do a bunch of different things, in 99% of all cases, I just need to look at the pdf.
+                The "lack of features" also makes this a very quick program to start up and use, minimizing waiting time and improving speed and productivity a tiny bit.
+                And for the few times I actually need more features zathura does have alot of features under the hood, but you have to look for them if you need them. 
+                This thinking applies to almost all of the programs I use, which you can find a list of on my <a href="https://github.com/arch-err">github</a>. 
+            </p>
+        </div>
+    </section>
+
+
+
+
+    <section id="end">
+        <span id="bracket">[ </span>
+        <h3>
+            <a href="https://www.jesber.xyz">
+                www.JesBer.xyz
+            </a> 
+        </h3>
+        <span id="bracket"> ]</span>
+    </section>
+
+</body>
+</html>

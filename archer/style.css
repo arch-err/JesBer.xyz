@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
+
+section {
+    margin-bottom: 5em;
+}
+
+#linux {
+
+    flex-direction: row-reverse;
+    padding: 5em;
+    padding-top: 30vh;
+
+}
+
+#linux img {
+    width: 70%;
+    padding-right: 10em;
+    padding-left: 5em;
+}
+
+#linux #text {
+    width: 30%;
+}
+
+
+#bspwm img{
+    width: 30%;
+    height: 30vw;
+    padding-left: 3vw;
+}
+
+#bspwm #text {
+    width: 80%;
+    padding: 3em;
+}
+
+#miniprogs img{
+    width: 30%;
+    height: 30vw;
+    padding-left: 3vw;
+}
+
+#miniprogs #text {
+    width: 80%;
+    padding: 3em;
+}
+
+#termText {
+    font-family: 'Share Tech Mono', monospace;
+    color: #080
+}
+
+#faketerminal {
+    border-radius: 10px;
+    width: 40%;
+    border: 3px solid rgba(255, 255, 255, 0.507);
+    padding: 1em;
+    margin: 3em;
+}
+
+
+#terminal #text {
+    width: 60%;
+    padding: 3em;
+}
+
+#shell #text {
+    width: 50%;
+    padding: 3em;
+}
+
+#shell #faketerminal {
+    width: 50%;
+}
+
+#shell {
+    flex-direction: row-reverse;
+}
+
+section a {
+    color: #080;
+    text-decoration: none;
+}
+
