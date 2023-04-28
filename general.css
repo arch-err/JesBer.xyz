@@ -18,6 +18,13 @@ nav {
     display: flex;
     overflow: hidden;
     border-bottom: 1px solid linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(47,47,47,1) 36%, rgba(255,255,255,1) 100%);
+    font-family: 'Quicksand', sans-serif;
+
+
+}
+
+img {
+    font-family: 'Quicksand', sans-serif;
 }
 
 nav #links {
@@ -145,4 +152,27 @@ li {
 #end a:hover {
     transition: 200ms color;
     color: white;
+}
+
+
+#warning {
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+    left: 0;
+    border-top: 1px solid #ff000028;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgb(0, 0, 0) 0%, rgba(70,0,0,0.6) 50%, rgba(0,0,0,1) 100%); 
+
+}
+
+#warningText {
+    font-size: 24px;
+    color: red;
+    font-family: 'Quicksand', sans-serif;
+
 }
