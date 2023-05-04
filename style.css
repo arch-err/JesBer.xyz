@@ -18,27 +18,29 @@ section {
     margin-left: auto;
 
 }
+#welcome h1 {
+  font-size: 3em;
+}
 
 #welcome #text {
     position: absolute;
+    font-size: 1em;
     top: calc(80% - 20vw);
     left: 10vw;
     width: calc(100% - 10vw);
+    margin-left: 1vw;
+    margin-right: 11w;
 
 }
 
-h1 {
-    font-family: 'Poiret One', cursive;
-    font-size: 90px;
-    margin: 0px;
-}
-
-p {
-    line-height: 1.8em;
+@media screen and (max-width: 1100px) {
+  #welcome {
+    font-size: 16px;
+  }
 }
 
 #whoami h1 {
-    margin-left: 2em;
+  font-size: 4em;
 }
 
 #whoami #text {
@@ -48,17 +50,19 @@ p {
     justify-content: space-around;
     position: relative;
 } 
-#whoami p {
-    width: 40%;
-}
 
 #whoami {
     margin-bottom: 35vh;
 }
 
 
+#whoami #inner-div {
+  margin-left: 1vw;
+  width: 40%;
+}
+
+
 #whoami #vertical-separator {
-    
     height: 14em;
     width: 2px;
     background-color: green;
@@ -68,26 +72,56 @@ p {
     flex-direction: column;
 }
 
-#contact #text {
+#contact  {
+  font-size: 40px;
     display: flex;
     flex-direction: row;
+    /* background-color: white; */
+}
+#contact h1 {
+  font-size: 2em;
+}
+
+#contact #text {
+  margin-left: auto;
+  z-index: 2;
+  height: 70vh;
+  /* background-color: #00000070; */
+  /* padding: 2em; */
+  /* border-radius: 20px; */
 }
 
 #contact ul {
     margin-left: auto;
     margin-right: 15vw;
-    margin-top: 4em;
+    margin-top: 2em;
     display: flex;
     flex-direction: column;
 }
 
-#contact img {
+#contact > img {
+  position: absolute;
     height: 70vh;
+    margin-left: 5vw;
+    margin-right: 5vw;
 }
-#contact h1 {
-    margin-left: auto;
-    margin-right: 15vw;
+
+@media screen and (max-width: 790px) {
+  #contact > img {
+      opacity: 0.7;
+      height: 50vh;
+      left: 50vw;
+      transform: translate(-50%);
+      margin-left: 0;
+      margin-right: 0;
+  }
+  #contact {
+    font-size: 30px;
+  }
 }
+/* #contact h1 { */
+/*     margin-right: auto; */
+/* } */
 
 #contact li img {
     height: 1em;
@@ -98,7 +132,7 @@ p {
     display: flex;
     align-items: center;
     margin-left: auto;
-    font-size: 40px;
+    font-size: 1em;
     margin-bottom: 0.5em;
 }
 #contact li a {
@@ -114,15 +148,6 @@ p {
     transition: 200ms color;
 }
 
-#end {
-    height: 40vh;
-    margin-top: 10vh;
-    display: flex;
-    align-items: center;
-    flex-direction: row;
-    justify-content: center;
-
-}
 
 
 #last {
@@ -147,17 +172,10 @@ p {
     color: green;
 }
 
-#end a {
-    text-decoration: none;
-    color: #888;
-    transition: 200ms color;
 
-}
 
-#end a:hover {
-    transition: 200ms color;
-    color: white;
-}
+
+
 
 
 
@@ -178,4 +196,34 @@ p {
     font-family: 'Share Tech Mono', monospace; 
     font-size: 2vw;
     color: #888;
+}
+
+
+@media screen and (max-width: 1300px) {
+  #whoami #text {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  #whoami #vertical-separator {
+    height: 2px;
+    width: 50%;
+    margin: 3em;
+  }
+  #whoami #inner-div {
+    width: 75%;
+    margin-left: 0;
+  }
+  #whoami p {
+    text-align: justify;
+  }
+}
+
+
+@media screen and (max-width: 680px) {
+  #whoami {
+    font-size: 16px;
+    margin-top: 1vh
+  }
+  
 }
